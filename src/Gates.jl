@@ -3,7 +3,7 @@ Base.adjoint(::AbstractGate) = error("not implemented")
 matrix(::AbstractGate) = error("not implemented")
 
 struct HGate <: AbstractGate end
-const HMatrix = ComplexF64[1 1; 1 -1]./convert(ComplexF64,sqrt(2))
+const HMatrix = ComplexF64[1 1; 1 -1] ./ convert(ComplexF64, sqrt(2))
 matrix(::HGate) = HMatrix
 
 struct XGate <: AbstractGate end
@@ -27,7 +27,7 @@ matrix(::SGate) = SMatrix
 S = SGate()
 
 struct SdagGate <: AbstractGate end
-const SdagMatrix = ComplexF64[1 0;0 -im]
+const SdagMatrix = ComplexF64[1 0; 0 -im]
 matrix(::SdagGate) = SdagMatrix
 Sdag = SdagGate()
 
@@ -42,17 +42,18 @@ matrix(::TdagGate) = TdagMatrix
 Tdag = TGate()
 
 struct RZGate
-    θ:: Vector{Float64}
+    θ::Vector{Float64}
 
     function RZGate(θ::Real)
         new([θ])
     end
+end
 
 function matrix(g::RZGate)
-    m = zeros(ComplexF64, (2,2))
+    m = zeros(ComplexF64, (2, 2))
     eθ = exp(im * g.θ[] / 2)
-    m[1,1] = conj(eθ)
-    m[2,2] = eθ
+    m[1, 1] = conj(eθ)
+    m[2, 2] = eθ
     m
 end
 

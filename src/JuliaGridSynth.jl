@@ -5,7 +5,7 @@ using SparseArrays
 # Write your package code here.
 include("Gates.jl")
 export
-    AbstractGate, 
+    AbstractGate,
     X,
     Y,
     Z,
@@ -13,7 +13,7 @@ export
     S,
     Sdag,
     T,
-    Tdag
+    Tdag,
     XGate,
     YGate,
     ZGate,
@@ -22,7 +22,7 @@ export
     TGate,
     SdagGate,
     TdagGate,
-    RZGate
+    RZGate,
+    matrix
 
-end 
 end
