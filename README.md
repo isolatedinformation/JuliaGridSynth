@@ -6,3 +6,5 @@ Implements [Optimal ancilla-free Clifford+T approximation of z-rotations](http:/
 
 [![Build Status](https://github.com/isolatedinformation/JuliaGridSynth.jl/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/isolatedinformation/JuliaGridSynth.jl/actions/workflows/CI.yml?query=branch%3Amain)
 [![Coverage](https://codecov.io/gh/isolatedinformation/JuliaGridSynth.jl/branch/main/graph/badge.svg)](https://codecov.io/gh/isolatedinformation/JuliaGridSynth.jl)
+
+*under active development in a very early stage.
