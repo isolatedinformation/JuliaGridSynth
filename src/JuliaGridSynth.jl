@@ -1,5 +1,6 @@
 module JuliaGridSynth
 
+# using AbstractAlgebra
 using LinearAlgebra
 using SparseArrays
 # Write your package code here.
@@ -24,5 +25,14 @@ export
     TdagGate,
     RZGate,
     matrix
+
+include("Rings.jl")
+export
+    AbstractRing,
+    Ring,
+    OmegaIntegerRing,
+    QuadraticIntegerRing,
+    DyadicFractionRing,
+    generate_QuadracticIntegerRing_element
 
 end
